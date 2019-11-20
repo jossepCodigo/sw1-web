@@ -5,7 +5,7 @@
         <div class="row d-flex bd-highlight">
             <div class="p-2 flex-grow-1 bd-highlight"><h2>Usuarios</h2></div>
             <div class="p-2 bd-highlight">
-                <button class="btn btn-primary">Nuevo Usuario</button>
+                <a href="{{ route('users.create')  }}" class="btn btn-primary" >Nuevo Usuario</a>
             </div>
             <div class="p-2 bd-highlight"></div>
         </div>

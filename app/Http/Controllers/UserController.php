@@ -13,6 +13,11 @@ class UserController extends Controller
         return view('users.index', compact('users'));
     }
 
+    public function create()
+    {
+        return view('users.create');
+    }
+
     public function store(UserRequest $request)
     {
         $User = User::create($request->all());

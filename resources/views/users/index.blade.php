@@ -2,9 +2,16 @@
 
 @section('content')
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
+        <div class="row d-flex bd-highlight">
+            <div class="p-2 flex-grow-1 bd-highlight"><h2>Usuarios</h2></div>
+            <div class="p-2 bd-highlight">
+                <button class="btn btn-primary">Nuevo Usuario</button>
+            </div>
+            <div class="p-2 bd-highlight"></div>
+        </div>
+            <div class="row">
                 <table class="table">
+
                     <thead class="thead-dark">
                     <tr>
                         <th scope="col">#</th>
@@ -14,15 +21,14 @@
                     </thead>
                     <tbody>
                     @foreach($users as $user)
-                    <tr>
-                        <th scope="row">{{ $loop->index +1  }}</th>
-                        <td>{{ $user->email  }}</td>
-                        <td>{{ $user->getRol()->name }}</td>
-                    </tr>
+                        <tr>
+                            <th scope="row">{{ $loop->index +1  }}</th>
+                            <td>{{ $user->email  }}</td>
+                            <td>{{ $user->getRol()->name }}</td>
+                        </tr>
                     @endforeach
                     </tbody>
                 </table>
             </div>
-        </div>
     </div>
 @endsection
